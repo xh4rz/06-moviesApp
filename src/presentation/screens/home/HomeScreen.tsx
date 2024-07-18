@@ -8,7 +8,14 @@ import { HorizontalCarousel } from '../../components/movies/HorizontalCarousel';
 export const HomeScreen = () => {
 	const { top } = useSafeAreaInsets();
 
-	const { isloading, nowPlaying, popular, topRated, upcoming } = useMovies();
+	const {
+		isloading,
+		nowPlaying,
+		popular,
+		topRated,
+		upcoming,
+		popularNextPage
+	} = useMovies();
 
 	if (isloading) {
 		return <Text>Cargando...</Text>;
@@ -21,7 +28,7 @@ export const HomeScreen = () => {
 				<HorizontalCarousel
 					movies={popular}
 					title="Populares"
-					loadNextPage={() => console.log('Fin alcanzado')}
+					loadNextPage={popularNextPage}
 				/>
 				<HorizontalCarousel movies={topRated} title="Mejor calificadas" />
 				<HorizontalCarousel movies={upcoming} title="Próximamente" />
