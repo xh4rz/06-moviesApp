@@ -26,17 +26,17 @@ export const MovieHeader = ({ poster, originalTitle, title }: Props) => {
 				<View style={styles.imageBorder}>
 					<Image style={styles.posterImage} source={{ uri: poster }} />
 				</View>
+			</View>
 
-				<View style={styles.marginContainer}>
-					<Text style={styles.subTitle}>{originalTitle}</Text>
-					<Text style={styles.title}>{title}</Text>
-				</View>
+			<View style={styles.marginContainer}>
+				<Text style={styles.subTitle}>{originalTitle}</Text>
+				<Text style={styles.title}>{title}</Text>
+			</View>
 
-				<View style={styles.backButton}>
-					<Pressable onPress={() => navigation.goBack()}>
-						<Text style={styles.backButtonText}>Regresar</Text>
-					</Pressable>
-				</View>
+			<View style={styles.backButton}>
+				<Pressable onPress={() => navigation.goBack()}>
+					<Text style={styles.backButtonText}>Regresar</Text>
+				</Pressable>
 			</View>
 		</>
 	);
