@@ -6,7 +6,7 @@ import { movieDBFetcher } from '../../config/adapters/movieDB.adapter';
 let popularPageNumber = 1;
 
 export const useMovies = () => {
-	const [isloading, setIsloading] = useState(true);
+	const [isLoading, setIsLoading] = useState(true);
 
 	const [nowPlaying, setNowPlaying] = useState<Movie[]>([]);
 
@@ -42,11 +42,11 @@ export const useMovies = () => {
 		setTopRated(topRatedMovies);
 		setUpComing(upcomingMovies);
 
-		setIsloading(false);
+		setIsLoading(false);
 	};
 
 	return {
-		isloading,
+		isLoading,
 		nowPlaying,
 		popular,
 		topRated,
